@@ -13,9 +13,14 @@
 		1817340A201A176E00055481 /* bookswapee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18173408201A176E00055481 /* bookswapee.xcdatamodeld */; };
 		1817340C201A176E00055481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1817340B201A176E00055481 /* Assets.xcassets */; };
 		1817340F201A176E00055481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1817340D201A176E00055481 /* LaunchScreen.storyboard */; };
+		18173417201A5A5F00055481 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18173416201A5A5F00055481 /* SignUpViewController.swift */; };
+		18173419201A5AEE00055481 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18173418201A5AEE00055481 /* ForgetPasswordViewController.swift */; };
+		1817341B201A667600055481 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1817341A201A667600055481 /* GoogleService-Info.plist */; };
+		9D3DEA9CBD621E013216B17A /* Pods_bookswapee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0565416C7CF13C8E7DD93C42 /* Pods_bookswapee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0565416C7CF13C8E7DD93C42 /* Pods_bookswapee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bookswapee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		181733FE201A176E00055481 /* bookswapee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookswapee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18173401201A176E00055481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18173403201A176E00055481 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,11 @@
 		1817340B201A176E00055481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1817340E201A176E00055481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18173410201A176E00055481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18173416201A5A5F00055481 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		18173418201A5AEE00055481 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
+		1817341A201A667600055481 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AB3126D7556AC0C6FDFF24F /* Pods-bookswapee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookswapee.release.xcconfig"; path = "Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee.release.xcconfig"; sourceTree = "<group>"; };
+		652802AE733D2FC9899F9717 /* Pods-bookswapee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookswapee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D3DEA9CBD621E013216B17A /* Pods_bookswapee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +53,8 @@
 			children = (
 				18173400201A176E00055481 /* bookswapee */,
 				181733FF201A176E00055481 /* Products */,
+				BA1B48351390B610FF5A8675 /* Pods */,
+				59DA52E505CBC7301DB8CB10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,51 @@
 		18173400201A176E00055481 /* bookswapee */ = {
 			isa = PBXGroup;
 			children = (
-				18173401201A176E00055481 /* AppDelegate.swift */,
-				18173403201A176E00055481 /* ViewController.swift */,
-				18173405201A176E00055481 /* Main.storyboard */,
+				18B0F24B201B1B8600DE7F69 /* View */,
+				18B0F24A201B1B5D00DE7F69 /* Controller */,
 				1817340B201A176E00055481 /* Assets.xcassets */,
-				1817340D201A176E00055481 /* LaunchScreen.storyboard */,
 				18173410201A176E00055481 /* Info.plist */,
+				1817341A201A667600055481 /* GoogleService-Info.plist */,
 				18173408201A176E00055481 /* bookswapee.xcdatamodeld */,
 			);
 			path = bookswapee;
+			sourceTree = "<group>";
+		};
+		18B0F24A201B1B5D00DE7F69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18173401201A176E00055481 /* AppDelegate.swift */,
+				18173403201A176E00055481 /* ViewController.swift */,
+				18173418201A5AEE00055481 /* ForgetPasswordViewController.swift */,
+				18173416201A5A5F00055481 /* SignUpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18B0F24B201B1B8600DE7F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18173405201A176E00055481 /* Main.storyboard */,
+				1817340D201A176E00055481 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		59DA52E505CBC7301DB8CB10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0565416C7CF13C8E7DD93C42 /* Pods_bookswapee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA1B48351390B610FF5A8675 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				652802AE733D2FC9899F9717 /* Pods-bookswapee.debug.xcconfig */,
+				2AB3126D7556AC0C6FDFF24F /* Pods-bookswapee.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18173413201A176E00055481 /* Build configuration list for PBXNativeTarget "bookswapee" */;
 			buildPhases = (
+				994A739A5EB4606F48881E6E /* [CP] Check Pods Manifest.lock */,
 				181733FA201A176E00055481 /* Sources */,
 				181733FB201A176E00055481 /* Frameworks */,
 				181733FC201A176E00055481 /* Resources */,
+				8C6AD787237954837173373E /* [CP] Embed Pods Frameworks */,
+				0EE9E7A750E1028E1218A1E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,11 +180,76 @@
 			files = (
 				1817340F201A176E00055481 /* LaunchScreen.storyboard in Resources */,
 				1817340C201A176E00055481 /* Assets.xcassets in Resources */,
+				1817341B201A667600055481 /* GoogleService-Info.plist in Resources */,
 				18173407201A176E00055481 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EE9E7A750E1028E1218A1E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6AD787237954837173373E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		994A739A5EB4606F48881E6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bookswapee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		181733FA201A176E00055481 /* Sources */ = {
@@ -141,6 +258,8 @@
 			files = (
 				18173404201A176E00055481 /* ViewController.swift in Sources */,
 				1817340A201A176E00055481 /* bookswapee.xcdatamodeld in Sources */,
+				18173419201A5AEE00055481 /* ForgetPasswordViewController.swift in Sources */,
+				18173417201A5A5F00055481 /* SignUpViewController.swift in Sources */,
 				18173402201A176E00055481 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +395,7 @@
 		};
 		18173414201A176E00055481 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 652802AE733D2FC9899F9717 /* Pods-bookswapee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +410,7 @@
 		};
 		18173415201A176E00055481 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AB3126D7556AC0C6FDFF24F /* Pods-bookswapee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

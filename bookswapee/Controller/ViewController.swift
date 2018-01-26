@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import Firebase
 class ViewController: UIViewController {
+ 
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,11 +23,10 @@ class ViewController: UIViewController {
     }
 
 
-
-    
     @IBAction func signIn(_ sender: Any) {
-     
-        
     }
+    
+    
+   
 }
 
