@@ -24,6 +24,15 @@ class ViewController: UIViewController {
 
 
     @IBAction func signIn(_ sender: Any) {
+        Auth.auth().signIn(withEmail: userName.text!, password:password.text!) { (user,error) in
+            if error != nil {
+                let alert = UIAlertController(title: "NOTICE", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style:UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+               self.performSegue(withIdentifier: "goToProfile", sender: self)
+            }
+        }
     }
     
     

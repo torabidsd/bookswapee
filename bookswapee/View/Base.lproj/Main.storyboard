@@ -73,6 +73,7 @@
                     <connections>
                         <outlet property="password" destination="kh7-DB-cKE" id="MLA-hn-44B"/>
                         <outlet property="userName" destination="A4U-aR-Ef7" id="Eqa-Cc-v5t"/>
+                        <segue destination="4Ad-3C-iON" kind="show" identifier="goToProfile" id="vsH-7d-irt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -139,16 +140,17 @@
                         <outlet property="pass" destination="tvQ-RX-Bi8" id="XMH-GQ-wbN"/>
                         <outlet property="repass" destination="eVe-7k-Ire" id="v24-Ug-J8W"/>
                         <outlet property="userName" destination="moa-ld-UnB" id="s5i-1P-lSb"/>
+                        <segue destination="4Ad-3C-iON" kind="show" identifier="goToProfile" id="ALZ-tC-P6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fAb-gF-OIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824.79999999999995" y="-197.45127436281859"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="Sph-rT-GEn">
             <objects>
-                <viewController id="4Ad-3C-iON" sceneMemberID="viewController">
+                <viewController id="4Ad-3C-iON" customClass="profileViewController" customModule="bookswapee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ptg-bL-PTt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -167,7 +169,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="مکان شما"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام و نام خانوادگی" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77q-Ot-tID">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام و نام خانوادگی" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77q-Ot-tID">
                                 <rect key="frame" x="113" y="168" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -223,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTw-r9-GdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.8" y="-184.85757121439281"/>
+            <point key="canvasLocation" x="1742" y="134"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="E6T-8s-HUa">
@@ -285,4 +287,7 @@
         <image name="خطها" width="344" height="216"/>
         <image name="مکان شما" width="150" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ALZ-tC-P6B"/>
+    </inferredMetricsTieBreakers>
 </document>

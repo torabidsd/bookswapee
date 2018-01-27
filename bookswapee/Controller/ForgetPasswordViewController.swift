@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class ForgetPasswordViewController: UIViewController {
 
     @IBOutlet weak var emailLink: UITextField!
@@ -39,6 +39,15 @@ class ForgetPasswordViewController: UIViewController {
     }
     
     @IBAction func sendLink(_ sender: Any) {
+        Auth.auth().sendPasswordReset(withEmail: emailLink.text!) { (error) in
+            if error != nil {
+                let alert = UIAlertController(title: "NOTICE", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style:UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
    

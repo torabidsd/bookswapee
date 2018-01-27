@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class SignUpViewController: UIViewController {
   
     @IBOutlet weak var userName: UITextField!
@@ -45,6 +45,25 @@ class SignUpViewController: UIViewController {
     
   
     @IBAction func signUp(_ sender: Any) {
+        if pass.text == repass.text {
+            Auth.auth().createUser(withEmail: userName.text!, password: pass.text!, completion: { (user, error) in
+                if error != nil {
+                    let alert = UIAlertController(title: "NOTICE", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style:UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }else{
+                    self.performSegue(withIdentifier: "goToProfile", sender: self)
+                }
+                
+                
+            })
+        }else{
+            let alert = UIAlertController(title: "NOTICE", message: "پسوردها با هم برابر نیستند.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style:UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
+        }
+        
     }
     
 }
