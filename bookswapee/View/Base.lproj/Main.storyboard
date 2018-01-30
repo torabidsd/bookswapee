@@ -226,7 +226,7 @@
                         <viewLayoutGuide key="safeArea" id="dCR-2M-y3j"/>
                     </view>
                     <connections>
-                        <segue destination="9Gp-cy-srN" kind="show" identifier="goToMap" id="sZF-j6-nGs"/>
+                        <segue destination="i4H-FN-SQ8" kind="show" identifier="goToMap" id="b3B-ug-gGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTw-r9-GdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,31 +242,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-5M-vZi">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map-pin" translatesAutoresizingMaskIntoConstraints="NO" id="jRI-xG-7qk">
-                                <rect key="frame" x="180" y="347" width="15" height="36"/>
+                                <rect key="frame" x="180" y="315" width="15" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search lable" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-PF-o3M">
+                                <rect key="frame" x="17" y="20" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvT-hI-XsI">
+                                <rect key="frame" x="69" y="30" width="248" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="45T-aa-Mkc" userLabel="searchBarView">
+                                <rect key="frame" x="17" y="20" width="342" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo8-pN-RVd">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="tranceparent"/>
+                                        <connections>
+                                            <action selector="gotosearchmap:" destination="i4H-FN-SQ8" eventType="touchUpInside" id="wl7-G2-91J"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IDI-ka-re5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jnV-fh-7lh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="jMp-1M-RDV">
-                            <connections>
-                                <action selector="search:" destination="i4H-FN-SQ8" id="JCU-Hu-MX5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="gXL-5M-vZi" id="A9c-C9-IA8"/>
+                        <outlet property="searchLabel" destination="RvT-hI-XsI" id="TLG-6t-i49"/>
+                        <segue destination="3JC-9j-mU6" kind="show" identifier="goToSearchMap" id="Ex2-DR-xFa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7q-Z2-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3565.5999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="2485.5999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--Search Map View Controller-->
+        <scene sceneID="Ts7-dn-uHN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNE-6K-eVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="3JC-9j-mU6" customClass="SearchMapViewController" customModule="bookswapee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="feL-oz-Fid">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="C0C-kb-0H1"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3218" y="134"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="E6T-8s-HUa">
@@ -318,31 +354,15 @@
             </objects>
             <point key="canvasLocation" x="825" y="537"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mRk-Cr-FG5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Gp-cy-srN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jNi-ix-XEb">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="i4H-FN-SQ8" kind="relationship" relationship="rootViewController" id="Mrg-2T-TFl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fmF-tA-Obd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2704" y="133.13343328335833"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Group 5" width="311" height="48"/>
         <image name="backbutton" width="36" height="63"/>
         <image name="map-pin" width="180" height="410"/>
+        <image name="search lable" width="342" height="50"/>
         <image name="sign in" width="114" height="33"/>
         <image name="sign up" width="114" height="33"/>
+        <image name="tranceparent" width="342" height="50"/>
         <image name="اضافه پروفایل" width="114" height="114"/>
         <image name="خطها" width="344" height="216"/>
         <image name="مکان شما" width="150" height="30"/>

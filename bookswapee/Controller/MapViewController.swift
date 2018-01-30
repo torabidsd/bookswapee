@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 class MapViewController: UIViewController,UISearchBarDelegate {
 
+    @IBOutlet weak var searchLabel: UILabel!
+    @IBAction func gotosearchmap(_ sender: Any) {
+        performSegue(withIdentifier: "goToSearchMap", sender: self)
+    }
     @IBAction func search(_ sender: Any) {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.delegate = self
