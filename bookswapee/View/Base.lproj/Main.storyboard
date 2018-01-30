@@ -168,6 +168,9 @@
                                 <rect key="frame" x="112" y="206" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="مکان شما"/>
+                                <connections>
+                                    <action selector="map:" destination="4Ad-3C-iON" eventType="touchUpInside" id="EYd-eu-sub"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام و نام خانوادگی" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77q-Ot-tID">
                                 <rect key="frame" x="113" y="168" width="150" height="30"/>
@@ -222,10 +225,44 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dCR-2M-y3j"/>
                     </view>
+                    <connections>
+                        <segue destination="9Gp-cy-srN" kind="show" identifier="goToMap" id="sZF-j6-nGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTw-r9-GdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1742" y="134"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="SIU-Ka-yqX">
+            <objects>
+                <viewController id="i4H-FN-SQ8" customClass="MapViewController" customModule="bookswapee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9UT-KO-d89">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-5M-vZi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="IDI-ka-re5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jnV-fh-7lh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="jMp-1M-RDV">
+                            <connections>
+                                <action selector="search:" destination="i4H-FN-SQ8" id="JCU-Hu-MX5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="gXL-5M-vZi" id="A9c-C9-IA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7q-Z2-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3567" y="133"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="E6T-8s-HUa">
@@ -276,6 +313,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPl-lf-3Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="825" y="537"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mRk-Cr-FG5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Gp-cy-srN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jNi-ix-XEb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i4H-FN-SQ8" kind="relationship" relationship="rootViewController" id="Mrg-2T-TFl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmF-tA-Obd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704" y="133.13343328335833"/>
         </scene>
     </scenes>
     <resources>

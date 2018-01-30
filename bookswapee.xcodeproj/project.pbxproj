@@ -18,6 +18,9 @@
 		18173417201A5A5F00055481 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18173416201A5A5F00055481 /* SignUpViewController.swift */; };
 		18173419201A5AEE00055481 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18173418201A5AEE00055481 /* ForgetPasswordViewController.swift */; };
 		1817341B201A667600055481 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1817341A201A667600055481 /* GoogleService-Info.plist */; };
+		18D277F7201FBF5F00080CB9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D277F6201FBF5F00080CB9 /* MapViewController.swift */; };
+		18D277F9201FC06A00080CB9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D277F8201FC06A00080CB9 /* MapKit.framework */; };
+		18D277FB201FCCAC00080CB9 /* TehranAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D277FA201FCCAC00080CB9 /* TehranAnnotation.swift */; };
 		9D3DEA9CBD621E013216B17A /* Pods_bookswapee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0565416C7CF13C8E7DD93C42 /* Pods_bookswapee.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		18173416201A5A5F00055481 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		18173418201A5AEE00055481 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		1817341A201A667600055481 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18D277F6201FBF5F00080CB9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		18D277F8201FC06A00080CB9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		18D277FA201FCCAC00080CB9 /* TehranAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TehranAnnotation.swift; sourceTree = "<group>"; };
 		2AB3126D7556AC0C6FDFF24F /* Pods-bookswapee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookswapee.release.xcconfig"; path = "Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee.release.xcconfig"; sourceTree = "<group>"; };
 		652802AE733D2FC9899F9717 /* Pods-bookswapee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bookswapee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bookswapee/Pods-bookswapee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D277F9201FC06A00080CB9 /* MapKit.framework in Frameworks */,
 				9D3DEA9CBD621E013216B17A /* Pods_bookswapee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				18173401201A176E00055481 /* AppDelegate.swift */,
+				18D277F6201FBF5F00080CB9 /* MapViewController.swift */,
+				18D277FA201FCCAC00080CB9 /* TehranAnnotation.swift */,
 				18173403201A176E00055481 /* ViewController.swift */,
 				18173418201A5AEE00055481 /* ForgetPasswordViewController.swift */,
 				18173416201A5A5F00055481 /* SignUpViewController.swift */,
@@ -108,6 +117,7 @@
 		59DA52E505CBC7301DB8CB10 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18D277F8201FC06A00080CB9 /* MapKit.framework */,
 				0565416C7CF13C8E7DD93C42 /* Pods_bookswapee.framework */,
 			);
 			name = Frameworks;
@@ -158,6 +168,11 @@
 					181733FD201A176E00055481 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -268,7 +283,9 @@
 				181142D8201C9660004DCF67 /* profileViewController.swift in Sources */,
 				18173419201A5AEE00055481 /* ForgetPasswordViewController.swift in Sources */,
 				18173417201A5A5F00055481 /* SignUpViewController.swift in Sources */,
+				18D277FB201FCCAC00080CB9 /* TehranAnnotation.swift in Sources */,
 				18173402201A176E00055481 /* AppDelegate.swift in Sources */,
+				18D277F7201FBF5F00080CB9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

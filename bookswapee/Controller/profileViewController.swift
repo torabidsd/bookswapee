@@ -32,4 +32,7 @@ class profileViewController: UIViewController {
     }
     */
 
+    @IBAction func map(_ sender: Any) {
+        performSegue(withIdentifier: "goToMap", sender: self)
+    }
 }
