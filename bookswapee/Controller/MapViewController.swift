@@ -67,7 +67,7 @@ class MapViewController: UIViewController,UISearchBarDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let distanceSpan: CLLocationDegrees = 2000
+        let distanceSpan: CLLocationDegrees = 1000
         let tehranLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.6892, 51.3890)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(tehranLocation, distanceSpan, distanceSpan), animated: true)
         let tehranLocationpin = TehranAnnotation(title: "tehran", subtitle: "subtehran", coordinate: tehranLocation)

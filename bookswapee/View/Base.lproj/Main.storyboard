@@ -242,9 +242,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-5M-vZi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map-pin" translatesAutoresizingMaskIntoConstraints="NO" id="jRI-xG-7qk">
+                                <rect key="frame" x="180" y="347" width="15" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IDI-ka-re5"/>
@@ -262,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7q-Z2-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3567" y="133"/>
+            <point key="canvasLocation" x="3565.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Forget Password View Controller-->
         <scene sceneID="E6T-8s-HUa">
@@ -336,6 +340,7 @@
     <resources>
         <image name="Group 5" width="311" height="48"/>
         <image name="backbutton" width="36" height="63"/>
+        <image name="map-pin" width="180" height="410"/>
         <image name="sign in" width="114" height="33"/>
         <image name="sign up" width="114" height="33"/>
         <image name="اضافه پروفایل" width="114" height="114"/>
